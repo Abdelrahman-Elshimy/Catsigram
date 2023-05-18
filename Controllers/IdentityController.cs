@@ -57,7 +57,7 @@ namespace Catistgram.Server.Controllers
                 return Unauthorized();
             }
 
-            return generateJwtToken(user);
+            return Ok(new {token = generateJwtToken(user) });
 
         }
 
